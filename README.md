@@ -4,7 +4,7 @@
 
 ExtraHands is an on-demand elderly companion care platform designed to help families arrange reliable companionship for ageing parents at home. It connects families with companions for short-term or planned visits, making it easier to coordinate care while providing visibility into bookings and visit updates.
 
-🔗 **Live Prototype:** 
+🔗 **Live Prototype:** https://ayanvsingh.github.io/extrahands-elderly-care/
 
 ## 🌟 Features
 
