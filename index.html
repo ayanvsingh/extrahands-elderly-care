@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ExtraHands — Trusted companion care, on demand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Installable app metadata -->
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkV4dHJhSGFuZHMgXHUyMDE0IENvbXBhbmlvbiBDYXJlIEJvb2tpbmciLCAic2hvcnRfbmFtZSI6ICJFeHRyYUhhbmRzIiwgImRlc2NyaXB0aW9uIjogIkJvb2sgYSB2ZXJpZmllZCBjb21wYW5pb24gdG8gYmUgd2l0aCB5b3VyIGVsZGVybHkgcGFyZW50cywgYnkgdGhlIGhvdXIgb3IgYnkgdGhlIGRheS4iLCAic3RhcnRfdXJsIjogIi4iLCAic2NvcGUiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjRjdGMUU0IiwgInRoZW1lX2NvbG9yIjogIiMyRjVENjIiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FZQUFBQlMzR3dIQUFBRG0wbEVRVlI0bk8zZE1XdGRaUUNBNFMrbVFhSFFJb1FiZFN5SVEwWlhKN2R1L2dJekNPMVFjUE1uZE9vUVVEb1VISnJkUlFjRjUvNEJ4emgwdEhBdEJET1VRZzF4S2JTMmFadUUzSHVUK3o3UGVEbVg3enVIOCthN0orZm1aR1YzZS9Od1FOUjdpNTRBTEpJQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpCMmFSNkRiTjJianVuK3dUeUdXcGhQTjliRzkxK3Z2M083ODNBczd0K1lqSTJycTIvZDV0Yk80L0Z3K214T016cmEzYTMxY1cyeU50TXhyQUNrQ1lBMEFaQW1BTkpXZHJjM0R4YzlpZHMvNzQwSGZ6NDk5ZnNuVjFiSHpzM0pHYzdvemY3YSszZDg4K1BmcjcxKzNJdmdkN2tveCtLSDMvOFp2Lzd4NU5UdnYveit5dmpwMjQvT2NFYW5Zd1VnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVhQNU51Z3krZVREUytPMzd6NWU5RFE0STFZQTBnUkFtZ0JJRXdCcExvS2ZlN0Q3ZE56K1plKzExNy82L1BLNCtlV1ZCY3lJZWJBQ2tDWUEwZ1JBbWdCSUV3QnBBaUJOQUtRdHhYMkE2ZjdCdUg3bjBhS253UVcwRkFId2doOEdKK01qRUdrQ0lFMEFwQzNGTmNCWlBBN3dUVitHWTdrdFJRQzhjRkdlRFhwZStBaEVtZ0JJRXdCcEFpQk5BS1FKZ0RTL0JuM3VpODgrOE1TM0lDc0FhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYWU0RW40SkhxUzhQS3dCcEFpQk5BS1FKZ0RRQmtDWUEwZ1JBbWdCSVc5bmQzanljOVNCYjk2Wmp1bjh3NjJFVzdqZzN3czdEc2JoL1l6STJycTYrZFp0Yk80L0h3K216T2Mzb2FIZTMxc2UxeWRwTXg3QUNrQ1lBMGdSQW1nQkltOHRGTUp4WFZnRFNCRUNhQUVnVEFHa0NJRTBBcEFtQU5BR1FKZ0RTUEJmb0NOZnZQRnIwRkdiR2Y4SDVQeXZBSzViNTVCOWorZmZ2cEFUd2tzckpVZG5QNHhBQWFRSWdUUUF2cVZ3Z1Z2YnpPQVR3aW1VL09aWjkvMDdLSDhTUVpnVWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRTnAvcmdWOXRoVnFpclFBQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAiYW55In0sIHsic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBWUFBQUQwZU5UNkFBQUtTMGxFUVZSNG5PM2RQNHRVVnh5QTRidHhTWkM0Z3NFL2FKbDI2d1FFaTdUQndzSTBGZ29CQ3d0YkM4dFVBU01zcExLUkZGYmFCckVVOGdtc0pGdGFhVXdRbXlDS3VQa0FJVUYwNzU2ZCt6NVBQek0vbHNPNTc1ekx6bDNiM3RyY21RQ0FsRTlHRHdBQTdEMEJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBa0FBQWdLRDEwUVBzSjJkdlBwM2U3WXllZ3FWN2NPM2s3SjloTGMvcjl1VmowNmtqODIyZk4rNi9uQjQrZmpYYis5ZGRPck14WFRoOWFQUVl3emtCQUlBZ0FRQUFRUUlBQUlJRUFBQUVDUUFBQ0JJQUFCQWtBQUFnU0FBQVFKQUFBSUFnQVFBQVFRSUFBSUlFQUFBRUNRQUFDRnJiM3RyMHpMQVovZjM2M2ZUZHozK01Ib045WkMrZUJqaUhWVnpMZDY0Y240NXVIQmc5eHI1eC9kNkw2ZEdUMTZQSGVHK1h2ems4bmYvcTg5RmpMSllUQUFBSW11K0IxcXdzMzVyKzM1VmYvcHllL1BWMjlCZ0FIOFVKQUFBRUNRQUFDQklBQUJBa0FBQWdTQUFBUUpBQUFJQWdBUUFBUVFJQUFJSUVBQUFFQ1FBQUNCSUFBQkFrQUFBZ1NBQUFRSkFBQUlBZ0FRQUFRUUlBQUlJRUFBQUVDUUFBQ0JJQUFCQWtBQUFnU0FBQVFKQUFBSUFnQVFBQVFRSUFBSUxXUnc4QXErYlc5OGRHandEdzBad0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFqeWI0Q3N2RGR2ZDZaelc4OCsrUFZmZi9uWjlNUDVMM1p4SW9EOXp3a0FBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2dRQUFBUUpBQUFJRWdBQUVDUUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBQUFRSkFBQUlFZ0FBRUNRQUFDQklBQUJBMFByb0FkaC9MdDU2UG5vRUFHWW1BSURGRXJQdzM5d0NBSUFnQVFBQVFRSUFBSUlFQUFBRUNRQUFDQklBQUJBa0FBQWdTQUFBUUpBQUFJQWdBUUFBUVFJQUFJSUVBQUFFQ1FBQUNCSUFBQkRrY2NEOHk1MHJ4NmVqR3dkR2ovSGUzcnpkbWM1dFBSczlCc0JLRVFEQVlxMWF6TTd0K3IwWDA2TW5yMGVQd1Q3aEZnQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlHaDk5QUR3c1Q1ZFg1c2VYRHM1ZWd5QWxlSUVBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUdoOTlBQ3dxbjc4OWVYMDIrK3ZQdmoxZDYrZW1BNGYxT0RBR0hZZkFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQksyUEhvRDk1K0t0NTZOSEFHQm1UZ0FBSUdodGUydHpaL1FRKzhYWm0wK25kLzRhN0pHN1YwOU1ody9PMCtEVzhyeHVYejQyblRveTN3SHFqZnN2cDRlUFg4MzIvbldYem14TUYwNGZHajNHY0U0QUFDQklBQUJBa0FBQWdDQUJBQUJCQWdBQWdnUUFBQVFKQUFBSUVnQUFFQ1FBQUNCSUFBQkFrQUFBZ0NBQkFBQkJBZ0FBZ2p3TkVBQ0NuQUFBUUpBQUFJQWdBUUFBUVFJQUFJSUVBQUFFQ1FBQUNCSUFBQkFrQUFBZ1NBQUFRSkFBQUlBZ0FRQUFRUUlBQUlJRUFBQUVDUUFBQ0JJQUFCQWtBQUFnU0FBQVFKQUFBSUFnQVFBQVFRSUFBSUlFQUFBRUNRQUFDQklBQUJBa0FBQWdTQUFBUUpBQUFJQWdBUUFBUWV1akI0QzVmZnZUMDlFanNLSWVYRHM1ZWdTWXpkcjIxdWJPNkNGZ0RpNzg3Qllod0JLNUJjQWl1Zml6bTZ3bmxrZ0FzRGcyYStaZ1hiRTBBb0JGc1VrekordUxKUkVBQUJBa0FGZ00zODdZQzlZWlN5RUFBQ0JJQUFCQWtBQUFnQ0FCQUFCQkFnQUFnZ1FBaStIbld0a0wxaGxMSVFBQUlFZ0FzQ2krblRFbjY0c2xFUUFzamsyYU9WaFhMSTBBWUpGczF1d202NGtsV3R2ZTJ0d1pQUVRNeVUrMzhxRmMrRmt5QVFBQVFXNEJBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQ0JBQUFCQWtBQUFnU0FBQVFKQUFBSUVnQUFFQ1FBQUNBSUFFQUFFRUNBQUNDQkFBQUJBa0FBQWdTQUFBUUpBQUFJRWdBQUVDUUFBQ0FJQUVBQUVFQ0FBQ0NCQUFBQkFrQUFBZ1NBQUFRSkFBQUlFZ0FBRUNRQUFDQUlBRUFBRUVDQUFDQy9nRWxMSThMT0hCeWl3QUFBQUJKUlU1RXJrSmdnZz09IiwgInNpemVzIjogIjUxMng1MTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FZQUFBQlMzR3dIQUFBRG0wbEVRVlI0bk8zZE1XdGRaUUNBNFMrbVFhSFFJb1FiZFN5SVEwWlhKN2R1L2dJekNPMVFjUE1uZE9vUVVEb1VISnJkUlFjRjUvNEJ4emgwdEhBdEJET1VRZzF4S2JTMmFadUUzSHVUK3o3UGVEbVg3enVIOCthN0orZm1aR1YzZS9Od1FOUjdpNTRBTEpJQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpCMmFSNkRiTjJianVuK3dUeUdXcGhQTjliRzkxK3Z2M083ODNBczd0K1lqSTJycTIvZDV0Yk80L0Z3K214T016cmEzYTMxY1cyeU50TXhyQUNrQ1lBMEFaQW1BTkpXZHJjM0R4YzlpZHMvNzQwSGZ6NDk5ZnNuVjFiSHpzM0pHYzdvemY3YSszZDg4K1BmcjcxKzNJdmdkN2tveCtLSDMvOFp2Lzd4NU5UdnYveit5dmpwMjQvT2NFYW5Zd1VnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVhQNU51Z3krZVREUytPMzd6NWU5RFE0STFZQTBnUkFtZ0JJRXdCcExvS2ZlN0Q3ZE56K1plKzExNy82L1BLNCtlV1ZCY3lJZWJBQ2tDWUEwZ1JBbWdCSUV3QnBBaUJOQUtRdHhYMkE2ZjdCdUg3bjBhS253UVcwRkFId2doOEdKK01qRUdrQ0lFMEFwQzNGTmNCWlBBN3dUVitHWTdrdFJRQzhjRkdlRFhwZStBaEVtZ0JJRXdCcEFpQk5BS1FKZ0RTL0JuM3VpODgrOE1TM0lDc0FhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYWU0RW40SkhxUzhQS3dCcEFpQk5BS1FKZ0RRQmtDWUEwZ1JBbWdCSVc5bmQzanljOVNCYjk2Wmp1bjh3NjJFVzdqZzN3czdEc2JoL1l6STJycTYrZFp0Yk80L0h3K216T2Mzb2FIZTMxc2UxeWRwTXg3QUNrQ1lBMGdSQW1nQkltOHRGTUp4WFZnRFNCRUNhQUVnVEFHa0NJRTBBcEFtQU5BR1FKZ0RTUEJmb0NOZnZQRnIwRkdiR2Y4SDVQeXZBSzViNTVCOWorZmZ2cEFUd2tzckpVZG5QNHhBQWFRSWdUUUF2cVZ3Z1Z2YnpPQVR3aW1VL09aWjkvMDdLSDhTUVpnVWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRSm9BU0JNQWFRSWdUUUNrQ1lBMEFaQW1BTklFUUpvQVNCTUFhUUlnVFFDa0NZQTBBWkFtQU5JRVFKb0FTQk1BYVFJZ1RRQ2tDWUEwQVpBbUFOSUVRTnAvcmdWOXRoVnFpclFBQUFBQVNVVk9SSzVDWUlJPSIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIiwgInB1cnBvc2UiOiAibWFza2FibGUifV19">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADiklEQVR4nO3dMWtdZRzA4TfVKiZIUYKps3TKUKSDX0AKFoTWD9CxSKXo4i6uDindHDoUQZy0m5uLgy5+gCC4dLBYaUEtBFKMi+AQm9y0uTnN7z7PeLn35H05P/7k3BxOljY31ncGRJyYegFwmARNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJETQpgiZF0KQImhRBkyJoUgRNiqBJeX6eB79z/9G4cvPePH/EJN59c3lcffvUnu+Zcu8Xzi6Pa+f3Xt+l63fH1vbOEa3oP2fWTo4bl1fndnwTmhRBkyJoUgRNytLmxvrRXxn869b3f46vfvzriT77ysqJ8eXVtUNe0W7/d/E0y0Xhfp7lvf/w89b49PaDJ/78F++/NlZffu4QVzQ7E5oUQZMiaFIETYqgSRE0KYImRdCkzPVuu4JvPjo99RI4ABOaFEGTsrC/ctz+6eH4/Ls/dr3+9Yenx0svLE2wIg6DCU2KoEkRNCmCJkXQpAiaFEGTcmy/h37w8O/xzme/Tr2MSSzy3vdjQpMiaFIETYqgSTm2F4VP+7CVx92cdBw86w+amZIJTYqgSRE0KYImRdCkCJoUQZNybL+HfloXz62Mi+dWpl4Gh8yEJkXQpAiaFEGTImhSBE2KoElZ2O+hZ/XLb9vjg1u/73r9k/deHW+98eIEK2IvJjQpgiZF0KQImhRBkyJoUgRNiqBJWdrcWN+Z18Hv3H80rty8N6/DT2q/P6xMufcLZ5fHtfOn9nzPpet3x9b23E79Y51ZOzluXF6d2/FNaFIETYqgSRE0KXO9KISjZkKTImhSBE2KoEkRNCmCJkXQpAiaFEGT4rkcY6T+Efy3H78+9RImtfATuhTzGL39HNRCB109+dV9zWKhg6ZH0KQsdNDVC6jqvmax0EGP0Tv5tf0clBv8SVn4CU2LoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEn5B5DZfNtZxAuyAAAAAElFTkSuQmCC">
+<meta name="theme-color" content="#2F5D62">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ExtraHands">
+<style>
+  :root{
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+
+    --ink:#2A2118;
+    --ink-soft:#6B5E4E;
+    --paper:#F7F1E4;
+    --paper-2:#EFE4CE;
+    --paper-3:#E7D9BC;
+    --line: rgba(42,33,24,0.16);
+    --teal:#2F5D62;
+    --teal-ink:#12292C;
+    --teal-soft:#DCE9E8;
+    --marigold:#D98F2B;
+    --marigold-soft:#F5E1BC;
+    --rose:#B45B60;
+    --rose-soft:#F1DCDD;
+    --sage:#5C7F5E;
+    --sage-soft:#DEE8DA;
+    --card-shadow: 0 1px 0 rgba(42,33,24,0.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#F1E9D8;
+      --ink-soft:#C4B8A2;
+      --paper:#221A12;
+      --paper-2:#2C2216;
+      --paper-3:#3A2E1C;
+      --line: rgba(241,233,216,0.16);
+      --teal:#7FB8BC;
+      --teal-ink:#DCEFEF;
+      --teal-soft:#1E3538;
+      --marigold:#F0B056;
+      --marigold-soft:#3B2E16;
+      --rose:#E29498;
+      --rose-soft:#3A2224;
+      --sage:#9BC09D;
+      --sage-soft:#243422;
+      --card-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#F1E9D8;
+    --ink-soft:#C4B8A2;
+    --paper:#221A12;
+    --paper-2:#2C2216;
+    --paper-3:#3A2E1C;
+    --line: rgba(241,233,216,0.16);
+    --teal:#7FB8BC;
+    --teal-ink:#DCEFEF;
+    --teal-soft:#1E3538;
+    --marigold:#F0B056;
+    --marigold-soft:#3B2E16;
+    --rose:#E29498;
+    --rose-soft:#3A2224;
+    --sage:#9BC09D;
+    --sage-soft:#243422;
+    --card-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:'Fraunces',Georgia,serif;}
+
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  .shell{
+    max-width:560px;
+    margin:0 auto;
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+
+  /* ---------- Header ---------- */
+  header.top{
+    position:sticky;
+    top:0;
+    padding-top:env(safe-area-inset-top,0px);
+    background:var(--paper);
+    z-index:20;
+    border-bottom:1px solid var(--line);
+  }
+  .top-inner{
+    padding:18px 20px 14px;
+  }
+  .top-row1{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .top-controls{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    flex:none;
+  }
+  .lang-select{
+    width:auto;
+    padding:6px 8px;
+    font-size:0.72rem;
+    font-weight:700;
+    border-radius:8px;
+    border:1px solid var(--line);
+    background:var(--paper-2);
+    color:var(--ink);
+  }
+  .theme-btn{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:8px;
+    width:32px;height:32px;
+    font-size:0.95rem;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    padding:0;
+    flex:none;
+  }
+  .wordmark{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:4px 8px;
+    flex:1;
+    min-width:0;
+  }
+  .wordmark .mark{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:1.5rem;
+    letter-spacing:-0.01em;
+  }
+  .wordmark .tag{
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+  .mode-toggle{
+    margin-top:14px;
+    display:flex;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:3px;
+    gap:3px;
+  }
+  .mode-toggle button{
+    flex:1;
+    border:none;
+    background:transparent;
+    color:var(--ink-soft);
+    font-size:0.82rem;
+    font-weight:700;
+    padding:9px 10px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background .18s ease, color .18s ease;
+  }
+  .mode-toggle button.active{
+    background:var(--teal);
+    color:var(--paper);
+  }
+
+  .tabs{
+    display:flex;
+    gap:4px;
+    padding:0 20px;
+  }
+  .tabs button{
+    border:none;
+    background:transparent;
+    color:var(--ink-soft);
+    font-weight:700;
+    font-size:0.86rem;
+    padding:10px 4px 12px;
+    margin-right:18px;
+    cursor:pointer;
+    border-bottom:2.5px solid transparent;
+  }
+  .tabs button.active{
+    color:var(--ink);
+    border-bottom-color:var(--marigold);
+  }
+
+  main{
+    flex:1;
+    padding:18px 20px calc(92px + env(safe-area-inset-bottom,0px));
+  }
+
+  h2.section-title{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:1.28rem;
+    margin:4px 0 4px;
+  }
+  p.section-sub{
+    color:var(--ink-soft);
+    font-size:0.9rem;
+    margin:0 0 18px;
+    line-height:1.5;
+  }
+
+  label{
+    display:block;
+    font-size:0.78rem;
+    font-weight:700;
+    color:var(--ink-soft);
+    margin:14px 0 6px;
+  }
+  select, input[type="date"], input[type="time"], input[type="number"], input[type="text"], textarea{
+    width:100%;
+    padding:11px 12px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    background:var(--paper-2);
+    color:var(--ink);
+    font-family:inherit;
+    font-size:0.92rem;
+  }
+  textarea{resize:vertical; min-height:70px;}
+  select:focus, input:focus, textarea:focus, button:focus-visible{
+    outline:2px solid var(--teal);
+    outline-offset:1px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    border:none;
+    border-radius:10px;
+    padding:12px 18px;
+    font-weight:700;
+    font-size:0.9rem;
+    cursor:pointer;
+    width:100%;
+  }
+  .btn-primary{background:var(--teal); color:var(--paper);}
+  .btn-marigold{background:var(--marigold); color:#241804;}
+  .btn-ghost{background:transparent; color:var(--teal); border:1px solid var(--line);}
+  .btn-small{width:auto; padding:8px 14px; font-size:0.82rem; border-radius:8px;}
+  .btn-danger-ghost{background:transparent; color:var(--rose); border:1px solid var(--line); width:auto; padding:8px 14px; font-size:0.82rem; border-radius:8px;}
+
+  /* ---------- Companion list ---------- */
+  .companion-card{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:var(--paper-2);
+    margin-bottom:10px;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+  }
+  .avatar{
+    flex:none;
+    width:46px;height:46px;
+    border-radius:50%;
+    display:block;
+    object-fit:cover;
+    background:var(--paper-3);
+    border:1px solid var(--line);
+  }
+  .companion-card .info{flex:1; min-width:0;}
+  .companion-card .row1{display:flex; justify-content:space-between; align-items:baseline; gap:8px;}
+  .companion-card .name{font-weight:700; font-size:0.96rem;}
+  .companion-card .rate{font-weight:800; color:var(--teal); font-size:0.9rem; white-space:nowrap;}
+  .companion-card .meta{font-size:0.78rem; color:var(--ink-soft); margin-top:2px;}
+  .companion-card .bio{font-size:0.83rem; color:var(--ink-soft); margin-top:6px; line-height:1.45;}
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    font-size:0.72rem;
+    font-weight:700;
+    padding:3px 8px;
+    border-radius:999px;
+  }
+  .badge-verified{background:var(--sage-soft); color:var(--sage);}
+  .badge-pending{background:var(--marigold-soft); color:var(--marigold);}
+  .badge-upcoming{background:var(--teal-soft); color:var(--teal);}
+  .badge-active{background:var(--teal-soft); color:var(--teal);}
+  .badge-declined{background:var(--rose-soft); color:var(--rose);}
+  .badge-completed{background:var(--paper-3); color:var(--ink-soft);}
+
+  .pulse-dot{
+    width:6px;height:6px;border-radius:50%;background:var(--teal);
+    display:inline-block; animation:pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{0%{opacity:1;}50%{opacity:.35;}100%{opacity:1;}}
+
+  /* ---------- Ticket-style booking card ---------- */
+  .ticket{
+    position:relative;
+    display:flex;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--paper-2);
+    margin-bottom:16px;
+    overflow:hidden;
+  }
+  .ticket .main{flex:1; padding:14px 12px 14px 16px; min-width:0;}
+  .ticket .stub{
+    flex:none;
+    width:96px;
+    padding:14px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border-left:1.5px dashed var(--line);
+    position:relative;
+  }
+  .ticket .stub::before, .ticket .stub::after{
+    content:"";
+    position:absolute;
+    left:-8px;
+    width:16px;height:16px;
+    border-radius:50%;
+    background:var(--paper);
+  }
+  .ticket .stub::before{top:-8px;}
+  .ticket .stub::after{bottom:-8px;}
+  .ticket .stub .price{font-weight:800; font-size:0.98rem; color:var(--teal);}
+  .ticket .stub .price-label{font-size:0.66rem; color:var(--ink-soft); margin-top:2px;}
+
+  .ticket .elder-name{font-weight:700; font-size:0.95rem;}
+  .ticket .with{font-size:0.8rem; color:var(--ink-soft); margin-top:2px;}
+  .ticket .when{font-size:0.8rem; margin-top:6px; display:flex; align-items:center; gap:6px;}
+  .ticket .statusrow{margin-top:8px; display:flex; align-items:center; gap:8px;}
+
+  .timeline{margin-top:12px; border-top:1px solid var(--line); padding-top:10px;}
+  .timeline-item{display:flex; gap:10px; margin-bottom:10px;}
+  .timeline-dot{
+    flex:none; width:28px;height:28px; border-radius:8px;
+    background:var(--teal-soft); color:var(--teal);
+    display:flex; align-items:center; justify-content:center; font-size:0.8rem;
+  }
+  .timeline-item .t-time{font-size:0.72rem; color:var(--ink-soft); font-weight:700;}
+  .timeline-item .t-note{font-size:0.85rem; margin-top:1px; line-height:1.4;}
+
+  .card-actions{display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;}
+
+  .stars{display:flex; gap:4px; margin:8px 0;}
+  .stars button{background:none; border:none; font-size:1.35rem; cursor:pointer; padding:0; line-height:1; color:var(--paper-3);}
+  .stars button.filled{color:var(--marigold);}
+
+  .empty{
+    text-align:center;
+    padding:48px 16px;
+    color:var(--ink-soft);
+  }
+  .empty .emoji{font-size:2.2rem; display:block; margin-bottom:10px;}
+  .empty .btn{width:auto; display:inline-flex; margin-top:14px;}
+
+  .elder-card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:var(--paper-2);
+    padding:14px;
+    margin-bottom:10px;
+  }
+  .elder-card .row1{display:flex; justify-content:space-between; align-items:baseline;}
+  .elder-card .name{font-weight:700;}
+  .elder-card .meta{font-size:0.78rem; color:var(--ink-soft); margin-top:2px;}
+  .elder-card .notes{font-size:0.85rem; margin-top:8px; line-height:1.5; color:var(--ink);}
+
+  /* ---------- Modal ---------- */
+  .backdrop{
+    position:fixed; inset:0;
+    background:rgba(20,15,8,0.45);
+    display:none;
+    align-items:flex-end;
+    justify-content:center;
+    z-index:50;
+    padding-top:env(safe-area-inset-top,0px);
+  }
+  .backdrop.show{display:flex;}
+  .modal{
+    background:var(--paper);
+    width:100%;
+    max-width:560px;
+    max-height:88vh;
+    overflow-y:auto;
+    border-radius:20px 20px 0 0;
+    padding:20px 20px calc(24px + env(safe-area-inset-bottom,0px));
+    border:1px solid var(--line);
+    border-bottom:none;
+  }
+  .modal-head{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;}
+  .modal-head h3{font-family:'Fraunces',Georgia,serif; font-size:1.2rem; font-weight:600; margin:0;}
+  .modal-close{background:none; border:none; font-size:1.3rem; color:var(--ink-soft); cursor:pointer; line-height:1; padding:2px 6px;}
+
+  .price-line{display:flex; justify-content:space-between; font-size:0.88rem; padding:6px 0;}
+  .price-line.total{font-weight:800; border-top:1px solid var(--line); margin-top:6px; padding-top:10px; font-size:0.98rem;}
+
+  .toast{
+    position:fixed;
+    bottom:calc(84px + env(safe-area-inset-bottom,0px));
+    left:50%;
+    transform:translateX(-50%) translateY(12px);
+    background:var(--ink);
+    color:var(--paper);
+    padding:11px 18px;
+    border-radius:10px;
+    font-size:0.85rem;
+    font-weight:600;
+    z-index:60;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .22s ease, transform .22s ease;
+    max-width:88%;
+    text-align:center;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  .companion-note{
+    background:var(--marigold-soft);
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:0.82rem;
+    line-height:1.5;
+    margin-top:10px;
+  }
+
+  .verify-panel{
+    background:var(--sage-soft);
+    border-radius:12px;
+    padding:12px 14px;
+    margin-top:14px;
+  }
+  .verify-head{font-weight:700; font-size:0.85rem; margin-bottom:6px;}
+  .verify-row{display:flex; justify-content:space-between; font-size:0.82rem; padding:3px 0;}
+  .v-ok{color:var(--sage); font-weight:700;}
+  .verify-note{font-size:0.73rem; color:var(--ink-soft); margin-top:8px; line-height:1.5;}
+
+  .doc-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 12px; border:1px solid var(--line); border-radius:10px; margin-bottom:8px;
+    font-size:0.85rem; background:var(--paper-2);
+  }
+  .doc-row .doc-status{font-size:0.76rem; font-weight:700;}
+  .doc-status.v-pending{color:var(--marigold);}
+  .doc-status.v-ok{color:var(--sage);}
+
+  .field-row{display:flex; gap:10px;}
+  .field-row > div{flex:1;}
+
+  /* ---------- Install banner ---------- */
+  .install-banner{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    margin:0 auto;
+    max-width:560px;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
+    background:var(--teal-ink, var(--ink));
+    color:var(--paper);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    z-index:30;
+    border-top:1px solid var(--line);
+  }
+  .install-banner .icon-badge{
+    flex:none;
+    width:34px;height:34px;
+    border-radius:9px;
+    background:var(--marigold);
+    color:#241804;
+    font-weight:800;
+    font-size:0.78rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .install-banner .copy{flex:1; min-width:0;}
+  .install-banner .copy .h{font-weight:700; font-size:0.85rem;}
+  .install-banner .copy .s{font-size:0.76rem; opacity:0.82; margin-top:1px; line-height:1.4;}
+  .install-banner .actions{flex:none; display:flex; align-items:center; gap:6px;}
+  .install-banner button.install-cta{
+    background:var(--marigold);
+    color:#241804;
+    border:none;
+    border-radius:8px;
+    padding:8px 12px;
+    font-weight:700;
+    font-size:0.78rem;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .install-banner button.install-dismiss{
+    background:none;
+    border:none;
+    color:var(--paper);
+    opacity:0.7;
+    font-size:1.1rem;
+    cursor:pointer;
+    padding:4px 6px;
+    line-height:1;
+  }
+
+  ::-webkit-scrollbar{width:8px;}
+  ::-webkit-scrollbar-thumb{background:var(--line); border-radius:8px;}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="top-inner">
+      <div class="top-row1">
+        <div class="wordmark">
+          <span class="mark">ExtraHands</span>
+          <span class="tag" id="tagLine">companion care, on your schedule</span>
+        </div>
+        <div class="top-controls">
+          <select id="langSelect" class="lang-select" onchange="setLang(this.value)" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="hi">हिं</option>
+            <option value="ta">தமி</option>
+            <option value="te">తెలు</option>
+          </select>
+          <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme">☀️</button>
+        </div>
+      </div>
+      <div class="mode-toggle" role="tablist" aria-label="Switch view">
+        <button id="modeFamily" class="active" onclick="setMode('family')">For families</button>
+        <button id="modeCompanion" onclick="setMode('companion')">I'm a companion</button>
+      </div>
+    </div>
+    <nav class="tabs" id="familyTabs">
+      <button data-tab="book" class="active" onclick="setTab('book')">Book</button>
+      <button data-tab="bookings" onclick="setTab('bookings')">My bookings</button>
+      <button data-tab="elders" onclick="setTab('elders')">Elder profiles</button>
+    </nav>
+  </header>
+
+  <main id="main"></main>
+</div>
+
+<div class="backdrop" id="backdrop" onclick="if(event.target===this) closeModal()">
+  <div class="modal" id="modal"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="install-banner" id="installBanner" style="display:none;">
+  <div class="icon-badge">EH</div>
+  <div class="copy">
+    <div class="h">Add ExtraHands to your Home Screen</div>
+    <div class="s" id="installCopy">Use it like an app, full screen, one tap to open.</div>
+  </div>
+  <div class="actions">
+    <button class="install-cta" id="installActionBtn" onclick="handleInstallAction()">Install</button>
+    <button class="install-dismiss" onclick="dismissInstallBanner()" aria-label="Dismiss">✕</button>
+  </div>
+</div>
+
+<script>
+/* ============ State ============ */
+const STORAGE_KEY = 'extrahands_prototype_v1';
+
+const COMPANIONS = [
+  {id:'c1', name:'Meera Pillai', age:45, rate:300, rating:4.9, reviews:128, bio:'Former nurse; specialises in memory care and gentle mobility support.', langs:["Tamil", "English", "Hindi"], hue:'teal', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEf0lEQVR4nO3cS1LrVhRAUZPKADOWtDKEtDKWzIg+DII0SNVLzONjbFna567VpiHpnK1rQxUPj89PLycg6Ze9LwD4PgFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUPYr3tfALfx2+9/XPTzf//150ZXwj09PD4/vex9EVzm0li/StQ9Ao7YKtr3iLlBwAd373DPCfnYBHxQe4d7TsjHJOCDOVq454R8LAI+iKOHe07Ix+DvwAdQi/d0al7zRE7gHU2JwGm8HyfwTqbEezrNupcaAe9g4sJPvKcCAd/Z5EWffG9HJeA7WmHBV7jHIxHwnay02Cvd694EfAcrLvSK97wHAW9s5UVe+d7vRcAbssCewdYEDGEC3oiT5wfPYjsC3oCFfcsz2YaAIUzAN+akeZ9nc3sChjAB35AT5nOe0W0JGMIEfCNOlq/zrG7Hf+S4kmW8jv/mcR0n8BXEez3P8DpO4G+wdNtwGl/OCXwh8W7Hs72cgC9gwbbnGV/GR+gvsFT78JH6c07gT4h3P5795wT8AQu0PzP4mIDfYXGOwyzeJ+CfsDDHYyY/J+AzFuW4zOYtAf+HBTk+M/o/Af/LYnSY1Q8CPlmIIjN7tXzAFqHL7BYP2AL0rT7DZQNeffCTrDzLJQNeeeBTrTrTJQOGKZYLeNU39QpWnO1SAa844NWsNuNlAl5tsCtbadbLBAwTLRHwSm9kXq0y8/EBrzJI3lph9uMDhslGB7zCG5iPTd+B0QHDdGMDnv7m5esm78LIgCcPjO+ZuhMjA4ZVjAt46puW603cjXEBw0oEDGGjAp74EYnbmrYjowKG1YwJeNqble1M2pUxAcOKBAxhIwKe9JGI+5iyMyMChlXlA57yJuX+JuxOPmBYmYAhTMAQlg54wncY9lXfoXTAsDoBQ5iAISwbcP27C8dR3qVswICAIU3AECZgCBMwhCUDLv/WkGOq7lQyYOCVgCFMwBAmYAgTMIQJGMIEDGEChrCHx+enl70vAvgeJzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwv4BgoG9n4koUXQAAAAASUVORK5CYII=', yearsActive:3, visits:214, responseTime:'under 10 min', aadhaar:{status:'verified', last4:'3482', verifiedOn:'02 Aug 2026'}, pan:{status:'verified', last4:'PPLK'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Rakesh V.", "rating": 5, "text": "Very patient with my father, arrived early both times."}, {"name": "Kavita J.", "rating": 5, "text": "Genuinely warm, not just professional. My mother looks forward to her visits."}, {"name": "Arjun R.", "rating": 4, "text": "Reliable and communicates well throughout the visit."}]},
+  {id:'c2', name:'Joseph Fernandes', age:52, rate:280, rating:4.8, reviews:95, bio:'Retired teacher; a patient conversationalist, comfortable with wheelchair assistance.', langs:["English", "Malayalam", "Hindi"], hue:'marigold', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEfklEQVR4nO3cy3HjVhBAUcrlcBzVBDaRKAwnoCC0lhdy1djU6EORIHD7nbPWAkD3xSOlKj08Pz2+nICkP/a+AOD7BAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGF/7n0B3MbfP39c9PN//fi50ZVwTw/PT48ve18El7k01q8SdY+AI7aK9j1ibhDwwd073HNCPjYBH9Te4Z4T8jEJ+GCOFu45IR+LgA/i6OGeE/Ix+DvwAdTiPZ2a1zyRE3hHUyJwGu/HCbyTKfGeTrPupUbAO5i48BPvqUDAdzZ50Sff21EJ+I5WWPAV7vFIBHwnKy32Sve6NwHfwYoLveI970HAG1t5kVe+93sR8IYssGewNQFDmIA34uT5xbPYjoA3YGHf8ky2IWAIE/CNOWne59ncnoAhTMA35IT5nGd0WwKGMAHfiJPl6zyr2/EfOa5kGa/jv3lcxwl8BfFezzO8jhP4GyzdNpzGl3MCX0i82/FsLyfgC1iw7XnGl/ER+gss1T58pP6cE/gT4t2PZ/85AX/AAu3PDD4m4HdYnOMwi/cJ+DcszPGYye8J+IxFOS6zeUvA/2FBjs+M/k/A/7IYHWb1i4BPFqLIzF4tH7BF6DK7xQO2AH2rz3DZgFcf/CQrz3LJgFce+FSrznTJgGGK5QJe9U29ghVnu1TAKw54NavNeJmAVxvsylaa9TIBw0RLBLzSG5lXq8x8fMCrDJK3Vpj9+IBhstEBr/AG5mPTd2B0wDDd2ICnv3n5usm7MDLgyQPje6buxMiAYRXjAp76puV6E3djXMCwEgFD2KiAJ35E4ram7ciogGE1YwKe9mZlO5N2ZUzAsCIBQ9iIgCd9JOI+puzMiIBhVfmAp7xJub8Ju5MPGFYmYAgTMISlA57wHYZ91XcoHTCsTsAQJmAIywZc/+7CcZR3KRswIGBIEzCECRjCBAxhyYDLvzXkmKo7lQwYeCVgCBMwhAkYwgQMYQKGMAFDmIAh7OH56fFl74sAvscJDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoawfwAN8/Ir3SR0OwAAAABJRU5ErkJggg==', yearsActive:2, visits:131, responseTime:'under 15 min', aadhaar:{status:'verified', last4:'7710', verifiedOn:'14 Jun 2026'}, pan:{status:'verified', last4:'AEFP'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Meena I.", "rating": 5, "text": "Excellent with my mother, very calm and respectful."}, {"name": "Pooja A.", "rating": 4, "text": "On time and easy to coordinate with over chat."}]},
+  {id:'c3', name:'Radha Krishnan', age:38, rate:260, rating:4.7, reviews:76, bio:'Six years of elder companionship experience; great with daily routines.', langs:["Tamil", "English"], hue:'rose', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEfUlEQVR4nO3cXU7rVhSA0VB1Wh1aVVUdWqcBg2AE9IFKtw2Xn5A49rfPWs882N7780lA4uH58enlBCT9svcFAN8nYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCPt17wvgNv7+46+Lfv63P3/f6Eq4p4fnx6eXvS+Cy1wa61eJukfAEVtF+x4xNwj44O4d7jkhH5uAD2rvcM8J+ZgEfDBHC/eckI9FwAdx9HDPCfkY/B34AGrxnk7Na57ICbyjKRE4jffjBN7JlHhPp1n3UiPgHUxc+In3VCDgO5u86JPv7agEfEcrLPgK93gkAr6TlRZ7pXvdm4DvYMWFXvGe9yDgja28yCvf+70IeEMW2DPYmoAhTMAbcfL84FlsR8AbsLBveSbbEDCECfjGnDTv82xuT8AQJuAbcsJ8zjO6LQFDmIBvxMnydZ7V7fiPHFeyjNfx3zyu4wS+gniv5xlexwn8DZZuG07jyzmBLyTe7Xi2lxPwBSzY9jzjy/gI/QWWah8+Un/OCfwJ8e7Hs/+cgD9ggfZnBh8T8DssznGYxfsE/BMW5njM5OcEfMaiHJfZvCXg/7Agx2dG/yfgf1mMDrP6QcAnC1FkZq+WD9gidJnd4gFbgL7VZ7hswKsPfpKVZ7lkwCsPfKpVZ7pkwDDFcgGv+qZewYqzXSrgFQe8mtVmvEzAqw12ZSvNepmAYaIlAl7pjcyrVWY+PuBVBslbK8x+fMAw2eiAV3gD87HpOzA6YJhubMDT37x83eRdGBnw5IHxPVN3YmTAsIpxAU9903K9ibsxLmBYiYAhbFTAEz8icVvTdmRUwLCaMQFPe7OynUm7MiZgWJGAIWxEwJM+EnEfU3ZmRMCwqnzAU96k3N+E3ckHDCsTMIQJGMLSAU/4DsO+6juUDhhWJ2AIEzCEZQOuf3fhOMq7lA0YEDCkCRjCBAxhAoawZMDl3xpyTNWdSgYMvBIwhAkYwgQMYQKGMAFDmIAhTMAQ9vD8+PSy90UA3+MEhjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUPYP22b7gXhjWuTAAAAAElFTkSuQmCC', yearsActive:2, visits:98, responseTime:'under 20 min', aadhaar:{status:'verified', last4:'2296', verifiedOn:'30 Apr 2026'}, pan:{status:'verified', last4:'CVMR'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Sunanda P.", "rating": 5, "text": "Took real initiative, even helped water the plants."}, {"name": "Lakshmi S.", "rating": 4, "text": "Good with routine care, a little reserved at first."}]},
+  {id:'c4', name:'Suresh Babu', age:41, rate:290, rating:4.9, reviews:150, bio:'Certified caregiver, trained in basic first aid and diabetes care support.', langs:["Telugu", "English", "Hindi"], hue:'sage', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEfklEQVR4nO3cO27rVhRAUTnIZDOHIEWQOWRuLlx7Fk7hAC+Rnz+yRJH73LVqFyTP2bySDfjh6fnx5QQk/bL3BQDfJ2AIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAj7de8L4Db++Puvi37+z99+3+hKuKeHp+fHl70vgstcGutXibpHwBFbRfseMTcI+ODuHe45IR+bgA9q73DPCfmYBHwwRwv3nJCPRcAHcfRwzwn5GPwd+ABq8Z5OzWueyAm8oykROI334wTeyZR4T6dZ91Ij4B1MXPiJ91Qg4DubvOiT7+2oBHxHKyz4Cvd4JAK+k5UWe6V73ZuA72DFhV7xnvcg4I2tvMgr3/u9CHhDFtgz2JqAIUzAG3Hy/OBZbEfAG7Cwb3km2xAwhAn4xpw07/Nsbk/AECbgG3LCfM4zui0BQ5iAb8TJ8nWe1e34jxxXsozX8d88ruMEvoJ4r+cZXscJ/A2WbhtO48s5gS8k3u14tpcT8AUs2PY848v4CP0FlmofPlJ/zgn8CfHux7P/nIA/YIH2ZwYfE/A7LM5xmMX7BPwTFuZ4zOTnBHzGohyX2bwl4P+wIMdnRv8n4H9ZjA6z+kHAJwtRZGavlg/YInSZ3eIBW4C+1We4bMCrD36SlWe5ZMArD3yqVWe6ZMAwxXIBr/qmXsGKs10q4BUHvJrVZrxMwKsNdmUrzXqZgGGiJQJe6Y3Mq1VmPj7gVQbJWyvMfnzAMNnogFd4A/Ox6TswOmCYbmzA09+8fN3kXRgZ8OSB8T1Td2JkwLCKcQFPfdNyvYm7MS5gWImAIWxUwBM/InFb03ZkVMCwmjEBT3uzsp1JuzImYFiRgCFsRMCTPhJxH1N2ZkTAsKp8wFPepNzfhN3JBwwrEzCECRjC0gFP+A7Dvuo7lA4YVidgCBMwhGUDrn934TjKu5QNGBAwpAkYwgQMYQKGsGTA5d8ackzVnUoGDLwSMIQJGMIEDGEChjABQ5iAIUzAEPbw9Pz4svdFAN/jBIYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFD2D+1Qd4VXWESqQAAAABJRU5ErkJggg==', yearsActive:4, visits:266, responseTime:'under 10 min', aadhaar:{status:'verified', last4:'5541', verifiedOn:'18 Mar 2026'}, pan:{status:'verified', last4:'BXQS'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Dev Sharan S.", "rating": 5, "text": "Handled a minor medical concern calmly and called us immediately."}, {"name": "Neeta M.", "rating": 5, "text": "Extremely dependable, our first choice every time."}, {"name": "Vikram M.", "rating": 5, "text": "Professional and genuinely caring, highly recommend."}]},
+  {id:'c5', name:'Lakshmi Narayanan', age:50, rate:270, rating:4.6, reviews:54, bio:'Warm and reliable; great company for morning walks and meal times.', langs:["Tamil", "Kannada"], hue:'teal', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEf0lEQVR4nO3cS1LrVhRAUZPKADOWtDKEtDKWzIg+DII0SNVLzONjbFna567VpiHpnK1rQxUPj89PLycg6Ze9LwD4PgFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUPYr3tfALfx2+9/XPTzf//150ZXwj09PD4/vex9EVzm0li/StQ9Ao7YKtr3iLlBwAd373DPCfnYBHxQe4d7TsjHJOCDOVq454R8LAI+iKOHe07Ix+DvwAdQi/d0al7zRE7gHU2JwGm8HyfwTqbEezrNupcaAe9g4sJPvKcCAd/Z5EWffG9HJeA7WmHBV7jHIxHwnay02Cvd694EfAcrLvSK97wHAW9s5UVe+d7vRcAbssCewdYEDGEC3oiT5wfPYjsC3oCFfcsz2YaAIUzAN+akeZ9nc3sChjAB35AT5nOe0W0JGMIEfCNOlq/zrG7Hf+S4kmW8jv/mcR0n8BXEez3P8DpO4G+wdNtwGl/OCXwh8W7Hs72cgC9gwbbnGV/GR+gvsFT78JH6c07gT4h3P5795wT8AQu0PzP4mIDfYXGOwyzeJ+CfsDDHYyY/J+AzFuW4zOYtAf+HBTk+M/o/Af/LYnSY1Q8CPlmIIjN7tXzAFqHL7BYP2AL0rT7DZQNeffCTrDzLJQNeeeBTrTrTJQOGKZYLeNU39QpWnO1SAa844NWsNuNlAl5tsCtbadbLBAwTLRHwSm9kXq0y8/EBrzJI3lph9uMDhslGB7zCG5iPTd+B0QHDdGMDnv7m5esm78LIgCcPjO+ZuhMjA4ZVjAt46puW603cjXEBw0oEDGGjAp74EYnbmrYjowKG1YwJeNqble1M2pUxAcOKBAxhIwKe9JGI+5iyMyMChlXlA57yJuX+JuxOPmBYmYAhTMAQlg54wncY9lXfoXTAsDoBQ5iAISwbcP27C8dR3qVswICAIU3AECZgCBMwhCUDLv/WkGOq7lQyYOCVgCFMwBAmYAgTMIQJGMIEDGEChrCHx+enl70vAvgeJzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwv4BgoG9n4koUXQAAAAASUVORK5CYII=', yearsActive:1, visits:61, responseTime:'under 20 min', aadhaar:{status:'verified', last4:'9013', verifiedOn:'09 Jan 2026'}, pan:{status:'verified', last4:'DKLN'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Ramesh C.", "rating": 5, "text": "Very friendly, my father enjoys their morning walks together."}, {"name": "Kavita J.", "rating": 4, "text": "Good experience overall, would book again."}]},
+  {id:'c6', name:'Arvind Menon', age:35, rate:310, rating:5.0, reviews:40, bio:'Physiotherapy background; well suited to post-surgery mobility support.', langs:["Malayalam", "English", "Hindi"], hue:'marigold', avatar:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAEfklEQVR4nO3cy3HjVhBAUcrlcBzVBDaRKAwnoCC0lhdy1djU6EORIHD7nbPWAkD3xSOlKj08Pz2+nICkP/a+AOD7BAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGF/7n0B3MbfP39c9PN//fi50ZVwTw/PT48ve18El7k01q8SdY+AI7aK9j1ibhDwwd073HNCPjYBH9Te4Z4T8jEJ+GCOFu45IR+LgA/i6OGeE/Ix+DvwAdTiPZ2a1zyRE3hHUyJwGu/HCbyTKfGeTrPupUbAO5i48BPvqUDAdzZ50Sff21EJ+I5WWPAV7vFIBHwnKy32Sve6NwHfwYoLveI970HAG1t5kVe+93sR8IYssGewNQFDmIA34uT5xbPYjoA3YGHf8ky2IWAIE/CNOWne59ncnoAhTMA35IT5nGd0WwKGMAHfiJPl6zyr2/EfOa5kGa/jv3lcxwl8BfFezzO8jhP4GyzdNpzGl3MCX0i82/FsLyfgC1iw7XnGl/ER+gss1T58pP6cE/gT4t2PZ/85AX/AAu3PDD4m4HdYnOMwi/cJ+DcszPGYye8J+IxFOS6zeUvA/2FBjs+M/k/A/7IYHWb1i4BPFqLIzF4tH7BF6DK7xQO2AH2rz3DZgFcf/CQrz3LJgFce+FSrznTJgGGK5QJe9U29ghVnu1TAKw54NavNeJmAVxvsylaa9TIBw0RLBLzSG5lXq8x8fMCrDJK3Vpj9+IBhstEBr/AG5mPTd2B0wDDd2ICnv3n5usm7MDLgyQPje6buxMiAYRXjAp76puV6E3djXMCwEgFD2KiAJ35E4ram7ciogGE1YwKe9mZlO5N2ZUzAsCIBQ9iIgCd9JOI+puzMiIBhVfmAp7xJub8Ju5MPGFYmYAgTMISlA57wHYZ91XcoHTCsTsAQJmAIywZc/+7CcZR3KRswIGBIEzCECRjCBAxhyYDLvzXkmKo7lQwYeCVgCBMwhAkYwgQMYQKGMAFDmIAh7OH56fFl74sAvscJDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoawfwAN8/Ir3SR0OwAAAABJRU5ErkJggg==', yearsActive:1, visits:44, responseTime:'under 15 min', aadhaar:{status:'verified', last4:'6628', verifiedOn:'22 Jul 2026'}, pan:{status:'verified', last4:'FZTA'}, backgroundCheck:'cleared', reviewsSample:[{"name": "Pooja A.", "rating": 5, "text": "Knew exactly how to help safely after a recent surgery in the family."}]},
+];
+
+/* ============ Language ============ */
+const TR = {
+  en: {
+    tagline: 'companion care, on your schedule',
+    modeFamily: 'For families', modeCompanion: "I'm a companion",
+    tabBook: 'Book', tabBookings: 'My bookings', tabElders: 'Elder profiles',
+    bookTitle: 'Book a companion',
+    bookSub: 'Choose who needs company, and for how long. Every companion below is background checked and rated by families like yours.',
+    forLabel: 'For', dateLabel: 'Date', timeLabel: 'Start time', durationLabel: 'Duration',
+    findBtn: 'Find verified companions',
+    bookingsTitle: 'My bookings',
+    bookingsSub: 'Track every visit in real time. Check-in updates from the companion appear here as they happen.',
+    bookingsEmptyTitle: 'No visits booked yet.',
+    bookingsEmptySub: 'Book your first companion visit and it will show up here, with live updates once it starts.',
+    bookBtn: 'Book a companion',
+    eldersTitle: 'Elder profiles',
+    eldersSub: 'Saved once, shared automatically with every companion you book, so nobody has to repeat themselves.',
+    addElderBtn: '+ Add another elder',
+    companionProfileTitle: 'My profile & verification',
+    todaysVisits: "Today's visits",
+    statusRequested:'Requested', statusConfirmed:'Confirmed', statusInProgress:'In progress', statusCompleted:'Completed', statusDeclined:'Declined',
+  },
+  hi: {
+    tagline: 'ज़रूरत के समय साथी सेवा',
+    modeFamily: 'परिवार के लिए', modeCompanion: 'मैं साथी हूं',
+    tabBook: 'बुक करें', tabBookings: 'मेरी बुकिंग', tabElders: 'बुज़ुर्ग प्रोफ़ाइल',
+    bookTitle: 'साथी बुक करें',
+    bookSub: 'चुनें किसे साथ चाहिए, और कितनी देर के लिए। नीचे हर साथी सत्यापित है और परिवारों द्वारा रेटेड है।',
+    forLabel: 'किसके लिए', dateLabel: 'तारीख़', timeLabel: 'शुरू होने का समय', durationLabel: 'अवधि',
+    findBtn: 'सत्यापित साथी खोजें',
+    bookingsTitle: 'मेरी बुकिंग',
+    bookingsSub: 'हर विज़िट को रीयल टाइम में ट्रैक करें।',
+    bookingsEmptyTitle: 'अभी कोई विज़िट बुक नहीं है।',
+    bookingsEmptySub: 'अपनी पहली साथी विज़िट बुक करें, यह यहां दिखेगी।',
+    bookBtn: 'साथी बुक करें',
+    eldersTitle: 'बुज़ुर्ग प्रोफ़ाइल',
+    eldersSub: 'एक बार सेव करें, यह हर बुकिंग में अपने आप साझा होगा।',
+    addElderBtn: '+ एक और प्रोफ़ाइल जोड़ें',
+    companionProfileTitle: 'मेरी प्रोफ़ाइल और सत्यापन',
+    todaysVisits: 'आज की विज़िट',
+    statusRequested:'अनुरोधित', statusConfirmed:'पुष्ट', statusInProgress:'जारी', statusCompleted:'पूर्ण', statusDeclined:'अस्वीकृत',
+  },
+  ta: {
+    tagline: 'தேவைக்கேற்ப துணை சேவை',
+    modeFamily: 'குடும்பத்தினருக்கு', modeCompanion: 'நான் ஒரு துணையாளர்',
+    tabBook: 'முன்பதிவு', tabBookings: 'என் முன்பதிவுகள்', tabElders: 'முதியோர் விவரம்',
+    bookTitle: 'துணையாளரை முன்பதிவு செய்யவும்',
+    bookSub: 'யாருக்கு தேவை, எவ்வளவு நேரம் என்பதைத் தேர்ந்தெடுக்கவும். கீழே உள்ள ஒவ்வொரு துணையாளரும் சரிபார்க்கப்பட்டவர்.',
+    forLabel: 'யாருக்காக', dateLabel: 'தேதி', timeLabel: 'தொடங்கும் நேரம்', durationLabel: 'கால அளவு',
+    findBtn: 'சரிபார்க்கப்பட்ட துணையாளர்களைக் காண்க',
+    bookingsTitle: 'என் முன்பதிவுகள்',
+    bookingsSub: 'ஒவ்வொரு வருகையையும் நேரலையில் கண்காணிக்கவும்.',
+    bookingsEmptyTitle: 'இன்னும் முன்பதிவு இல்லை.',
+    bookingsEmptySub: 'உங்கள் முதல் வருகையை முன்பதிவு செய்யவும், அது இங்கே தெரியும்.',
+    bookBtn: 'துணையாளரை முன்பதிவு செய்யவும்',
+    eldersTitle: 'முதியோர் விவரம்',
+    eldersSub: 'ஒருமுறை சேமிக்கவும், ஒவ்வொரு முன்பதிவிலும் தானாகப் பகிரப்படும்.',
+    addElderBtn: '+ மற்றொரு விவரத்தைச் சேர்க்கவும்',
+    companionProfileTitle: 'என் சுயவிவரம் & சரிபார்ப்பு',
+    todaysVisits: 'இன்றைய வருகைகள்',
+    statusRequested:'கோரப்பட்டது', statusConfirmed:'உறுதி', statusInProgress:'நடைபெறுகிறது', statusCompleted:'முடிந்தது', statusDeclined:'நிராகரிக்கப்பட்டது',
+  },
+  te: {
+    tagline: 'అవసరమైనప్పుడు తోడుగా సేవ',
+    modeFamily: 'కుటుంబాల కోసం', modeCompanion: 'నేను తోడుగా ఉన్నాను',
+    tabBook: 'బుక్ చేయండి', tabBookings: 'నా బుకింగ్‌లు', tabElders: 'వృద్ధుల ప్రొఫైల్',
+    bookTitle: 'తోడును బుక్ చేయండి',
+    bookSub: 'ఎవరికి తోడు కావాలో, ఎంతసేపు కావాలో ఎంచుకోండి. కింద ఉన్న ప్రతి తోడు ధృవీకరించబడింది.',
+    forLabel: 'ఎవరి కోసం', dateLabel: 'తేదీ', timeLabel: 'ప్రారంభ సమయం', durationLabel: 'వ్యవధి',
+    findBtn: 'ధృవీకరించిన తోడులను కనుగొనండి',
+    bookingsTitle: 'నా బుకింగ్‌లు',
+    bookingsSub: 'ప్రతి సందర్శనను నిజ సమయంలో ట్రాక్ చేయండి.',
+    bookingsEmptyTitle: 'ఇంకా బుకింగ్‌లు లేవు.',
+    bookingsEmptySub: 'మీ మొదటి సందర్శనను బుక్ చేయండి, ఇది ఇక్కడ కనిపిస్తుంది.',
+    bookBtn: 'తోడును బుక్ చేయండి',
+    eldersTitle: 'వృద్ధుల ప్రొఫైల్',
+    eldersSub: 'ఒకసారి సేవ్ చేయండి, ప్రతి బుకింగ్‌లో స్వయంచాలకంగా పంచుకోబడుతుంది.',
+    addElderBtn: '+ మరో ప్రొఫైల్ జోడించండి',
+    companionProfileTitle: 'నా ప్రొఫైల్ & ధృవీకరణ',
+    todaysVisits: 'నేటి సందర్శనలు',
+    statusRequested:'అభ్యర్థించారు', statusConfirmed:'నిర్ధారించబడింది', statusInProgress:'జరుగుతోంది', statusCompleted:'పూర్తయింది', statusDeclined:'తిరస్కరించబడింది',
+  }
+};
+function t(key){
+  const lang = (typeof state!=='undefined' && state.lang) || 'en';
+  return (TR[lang] && TR[lang][key]) || TR.en[key] || key;
+}
+function setLang(lang){
+  state.lang = lang;
+  saveState();
+  applyHeaderTexts();
+  render();
+}
+function applyHeaderTexts(){
+  document.getElementById('tagLine').textContent = t('tagline');
+  document.getElementById('modeFamily').textContent = t('modeFamily');
+  document.getElementById('modeCompanion').textContent = t('modeCompanion');
+  document.querySelector('[data-tab="book"]').textContent = t('tabBook');
+  document.querySelector('[data-tab="bookings"]').textContent = t('tabBookings');
+  document.querySelector('[data-tab="elders"]').textContent = t('tabElders');
+  document.getElementById('langSelect').value = state.lang || 'en';
+}
+
+/* ============ Theme ============ */
+function applyTheme(){
+  const root = document.documentElement;
+  if(state.theme === 'light'){ root.setAttribute('data-theme','light'); }
+  else if(state.theme === 'dark'){ root.setAttribute('data-theme','dark'); }
+  else { root.removeAttribute('data-theme'); }
+  const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = state.theme === 'dark' || (state.theme === 'auto' && systemDark);
+  const btn = document.getElementById('themeBtn');
+  if(btn) btn.textContent = isDark ? '🌙' : '☀️';
+}
+function toggleTheme(){
+  const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const currentlyDark = state.theme === 'dark' || (state.theme === 'auto' && systemDark);
+  state.theme = currentlyDark ? 'light' : 'dark';
+  saveState();
+  applyTheme();
+}
+
+function pad(n){return String(n).padStart(2,'0');}
+function isoDate(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function isoTime(d){return pad(d.getHours())+':'+pad(d.getMinutes());}
+function fmtDate(iso){
+  const d = new Date(iso+'T00:00:00');
+  return d.toLocaleDateString('en-IN',{weekday:'short', day:'numeric', month:'short'});
+}
+function fmtWhen(dt){
+  return dt.toLocaleString('en-IN',{day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+}
+function money(n){return '\u20B9' + Math.round(n).toLocaleString('en-IN');}
+function initials(name){return name.split(' ').map(p=>p[0]).slice(0,2).join('').toUpperCase();}
+
+function defaultState(){
+  const now = new Date();
+  const tomorrow = new Date(now.getTime() + 24*3600*1000);
+  tomorrow.setHours(14,0,0,0);
+  const inTwoDays = new Date(now.getTime() + 2*24*3600*1000);
+  inTwoDays.setHours(11,0,0,0);
+
+  const past = new Date(now.getTime() - 3*24*3600*1000);
+  const pastCheckin = new Date(past); pastCheckin.setHours(9,5,0,0);
+  const pastNote = new Date(past); pastNote.setHours(12,30,0,0);
+  const pastCheckout = new Date(past); pastCheckout.setHours(17,10,0,0);
+
+  return {
+    mode: 'family',
+    tab: 'book',
+    theme: 'auto',
+    lang: 'en',
+    companionDocs: {
+      aadhaar: {status:'verified', last4:'3482', verifiedOn:'02 Aug 2026'},
+      pan: {status:'verified', last4:'PPLK'}
+    },
+    elders: [
+      {id:'e1', name:'Chandrika Bux Singh', age:76, relation:'Grandfather', notes:'Mild arthritis, uses a walking stick. Prefers conversation in Hindi. Enjoys old film music.'},
+      {id:'e2', name:'Siddhi Singh', age:72, relation:'Grandmother', notes:'Early stage memory support needed. Can feel anxious meeting someone new at first; a calm, unhurried introduction helps. Loves the garden.'}
+    ],
+    bookings: [
+      {
+        id:'b1', elderId:'e1', companionId:'c1',
+        date: isoDate(tomorrow), startTime: isoTime(tomorrow), hours: 4,
+        status:'upcoming', checkins:[], rating:null, review:null, createdAt: now.toISOString()
+      },
+      {
+        id:'b3', elderId:'e2', companionId:'c1',
+        date: isoDate(inTwoDays), startTime: isoTime(inTwoDays), hours: 8,
+        status:'pending', checkins:[], rating:null, review:null, createdAt: new Date(now.getTime()-3600*1000).toISOString()
+      },
+      {
+        id:'b2', elderId:'e2', companionId:'c4',
+        date: isoDate(past), startTime:'09:00', hours: 8,
+        status:'completed',
+        checkins:[
+          {type:'check-in', time: pastCheckin.toISOString(), note:'Arrived on time, settling in with breakfast. All well.'},
+          {type:'note', time: pastNote.toISOString(), note:'Had lunch together and are doing a jigsaw puzzle now.'},
+          {type:'check-out', time: pastCheckout.toISOString(), note:'Calm afternoon, no concerns. See you next time!'}
+        ],
+        rating:null, review:null, createdAt: past.toISOString()
+      }
+    ]
+  };
+}
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultState();
+    const parsed = JSON.parse(raw);
+    if(!parsed.elders || !parsed.bookings) return defaultState();
+    // Migration: fill in fields added in later versions for people with older saved state.
+    const d = defaultState();
+    if(!parsed.companionDocs) parsed.companionDocs = d.companionDocs;
+    if(!parsed.theme) parsed.theme = 'auto';
+    if(!parsed.lang) parsed.lang = 'en';
+    return parsed;
+  }catch(e){
+    return defaultState();
+  }
+}
+function saveState(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){ /* storage unavailable, continue in-memory */ }
+}
+
+let state = loadState();
+let bookingDraft = null; // {elderId, date, startTime, hours}
+
+/* ============ Toast ============ */
+let toastTimer=null;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2400);
+}
+
+/* ============ Modal ============ */
+function openModal(html){
+  document.getElementById('modal').innerHTML = html;
+  document.getElementById('backdrop').classList.add('show');
+}
+function closeModal(){
+  document.getElementById('backdrop').classList.remove('show');
+}
+
+/* ============ Mode & tabs ============ */
+function setMode(m){
+  state.mode = m;
+  document.getElementById('modeFamily').classList.toggle('active', m==='family');
+  document.getElementById('modeCompanion').classList.toggle('active', m==='companion');
+  document.getElementById('familyTabs').style.display = (m==='family') ? 'flex' : 'none';
+  render();
+}
+function setTab(t){
+  state.tab = t;
+  document.querySelectorAll('#familyTabs button').forEach(b=>b.classList.toggle('active', b.dataset.tab===t));
+  render();
+}
+
+/* ============ Render root ============ */
+function render(){
+  const main = document.getElementById('main');
+  if(state.mode==='companion'){
+    main.innerHTML = renderCompanionView();
+  } else if(state.tab==='book'){
+    main.innerHTML = renderBookTab();
+  } else if(state.tab==='bookings'){
+    main.innerHTML = renderBookingsTab();
+  } else {
+    main.innerHTML = renderEldersTab();
+  }
+}
+
+/* ============ Book tab ============ */
+function renderBookTab(){
+  const elderOptions = state.elders.map(e=>`<option value="${e.id}">${e.name} (${e.relation})</option>`).join('');
+  const draft = bookingDraft || {};
+  return `
+    <h2 class="section-title">${t('bookTitle')}</h2>
+    <p class="section-sub">${t('bookSub')}</p>
+
+    <label for="fElder">${t('forLabel')}</label>
+    <select id="fElder">${elderOptions}</select>
+
+    <div class="field-row">
+      <div>
+        <label for="fDate">${t('dateLabel')}</label>
+        <input type="date" id="fDate" value="${draft.date || isoDate(new Date())}">
+      </div>
+      <div>
+        <label for="fTime">${t('timeLabel')}</label>
+        <input type="time" id="fTime" value="${draft.startTime || '10:00'}">
+      </div>
+    </div>
+
+    <label for="fDuration">${t('durationLabel')}</label>
+    <select id="fDuration" onchange="onDurationChange()">
+      <option value="2">2 hours</option>
+      <option value="4" selected>4 hours</option>
+      <option value="8">Full day (8 hours)</option>
+      <option value="16">2 days (on site)</option>
+      <option value="custom">3+ days (custom)</option>
+    </select>
+    <div id="customDaysWrap" style="display:none;">
+      <label for="fDays">Number of days</label>
+      <input type="number" id="fDays" min="3" value="3">
+    </div>
+
+    <div style="margin-top:18px;">
+      <button class="btn btn-primary" onclick="findCompanions()">${t('findBtn')}</button>
+    </div>
+
+    <div id="companionResults"></div>
+  `;
+}
+
+function onDurationChange(){
+  const v = document.getElementById('fDuration').value;
+  document.getElementById('customDaysWrap').style.display = (v==='custom') ? 'block' : 'none';
+}
+
+function computeHours(){
+  const v = document.getElementById('fDuration').value;
+  if(v==='custom'){
+    const days = Math.max(3, parseInt(document.getElementById('fDays').value||'3',10));
+    return days*8;
+  }
+  return parseInt(v,10);
+}
+
+function findCompanions(){
+  const elderId = document.getElementById('fElder').value;
+  const date = document.getElementById('fDate').value;
+  const startTime = document.getElementById('fTime').value;
+  const hours = computeHours();
+  bookingDraft = {elderId, date, startTime, hours};
+
+  const sorted = [...COMPANIONS].sort((a,b)=>b.rating-a.rating);
+  const cards = sorted.map(c => `
+    <button class="companion-card" onclick="openCompanionDetail('${c.id}')">
+      <img class="avatar" src="${c.avatar}" alt="${c.name}">
+      <div class="info">
+        <div class="row1">
+          <span class="name">${c.name}</span>
+          <span class="rate">${money(c.rate)}/hr</span>
+        </div>
+        <div class="meta">
+          <span class="badge badge-verified">✓ ID verified</span>
+          &nbsp;★ ${c.rating.toFixed(1)} (${c.reviews}) &nbsp;·&nbsp; ${c.age} yrs
+        </div>
+        <div class="bio">${c.bio}</div>
+        <div class="meta" style="margin-top:6px;">Speaks ${c.langs.join(', ')} · ${c.visits} visits · ${c.yearsActive} yr${c.yearsActive===1?'':'s'} on ExtraHands</div>
+      </div>
+    </button>
+  `).join('');
+
+  document.getElementById('companionResults').innerHTML = `
+    <h2 class="section-title" style="margin-top:26px;">Available for your window</h2>
+    <p class="section-sub">${hours} hour${hours===1?'':'s'} starting ${fmtDate(date)} at ${startTime}. Tap a profile to see full details and confirm.</p>
+    ${cards}
+  `;
+}
+
+function openCompanionDetail(companionId){
+  const c = COMPANIONS.find(x=>x.id===companionId);
+  const elder = state.elders.find(e=>e.id===bookingDraft.elderId);
+  const companionCharge = c.rate * bookingDraft.hours;
+  const fee = Math.round(companionCharge*0.2);
+  const total = companionCharge+fee;
+
+  const reviewsHtml = c.reviewsSample.slice(0,3).map(r=>`
+    <div style="padding:10px 0; border-top:1px solid var(--line);">
+      <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:700;">
+        <span>${r.name}</span><span>${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</span>
+      </div>
+      <div style="font-size:0.83rem; color:var(--ink-soft); margin-top:2px; line-height:1.45;">${r.text}</div>
+    </div>`).join('');
+
+  const docs = c.id===DEMO_COMPANION_ID ? state.companionDocs : {aadhaar:c.aadhaar, pan:c.pan};
+
+  openModal(`
+    <div class="modal-head">
+      <h3>${c.name}</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; margin:10px 0;">
+      <img class="avatar" style="width:54px;height:54px;" src="${c.avatar}" alt="${c.name}">
+      <div>
+        <div><span class="badge badge-verified">✓ ID verified</span></div>
+        <div style="font-size:0.85rem; color:var(--ink-soft); margin-top:4px;">★ ${c.rating.toFixed(1)} from ${c.reviews} families · ${c.age} yrs</div>
+      </div>
+    </div>
+    <p style="font-size:0.9rem; line-height:1.55;">${c.bio}</p>
+    <p style="font-size:0.85rem; color:var(--ink-soft);">Speaks ${c.langs.join(', ')} · ${c.visits} visits completed · ${c.yearsActive} yr${c.yearsActive===1?'':'s'} on ExtraHands · typically responds ${c.responseTime}</p>
+
+    <div class="verify-panel">
+      <div class="verify-head">🔒 Identity &amp; safety checks</div>
+      ${docStatusLine('Aadhaar', docs.aadhaar, 'aadhaar')}
+      ${docStatusLine('PAN card', docs.pan, 'pan')}
+      <div class="verify-row"><span>Background check</span><span class="v-ok">✓ Cleared</span></div>
+      <div class="verify-note">Full ID documents are reviewed and verified by ExtraHands, not shared in raw form, so numbers stay masked here for ${c.name.split(' ')[0]}'s safety and yours.</div>
+    </div>
+
+    <label style="margin-top:16px;">What families say</label>
+    <div>${reviewsHtml}</div>
+
+    <div class="companion-note">
+      <strong>${elder.name}'s notes, shared with ${c.name.split(' ')[0]} before the visit:</strong><br>
+      ${elder.notes}
+    </div>
+
+    <label style="margin-top:16px;">Visit summary</label>
+    <div style="font-size:0.88rem; color:var(--ink-soft); line-height:1.6;">
+      ${fmtDate(bookingDraft.date)} at ${bookingDraft.startTime} · ${bookingDraft.hours} hour${bookingDraft.hours===1?'':'s'}
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="price-line"><span>Companion charge (${bookingDraft.hours} hrs × ${money(c.rate)})</span><span>${money(companionCharge)}</span></div>
+      <div class="price-line"><span>ExtraHands verification &amp; support fee (20%)</span><span>${money(fee)}</span></div>
+      <div class="price-line total"><span>Total</span><span>${money(total)}</span></div>
+    </div>
+
+    <button class="btn btn-marigold" style="margin-top:18px;" onclick="confirmBooking('${c.id}')">Pay ${money(total)} &amp; send request</button>
+    <p style="font-size:0.76rem; color:var(--ink-soft); text-align:center; margin-top:8px;">${c.name.split(' ')[0]} will need to accept before the visit is confirmed.</p>
+  `);
+}
+
+function confirmBooking(companionId){
+  const c = COMPANIONS.find(x=>x.id===companionId);
+  const id = 'b' + Math.random().toString(36).slice(2,9);
+  state.bookings.unshift({
+    id, elderId: bookingDraft.elderId, companionId,
+    date: bookingDraft.date, startTime: bookingDraft.startTime, hours: bookingDraft.hours,
+    status:'pending', checkins:[], rating:null, review:null, createdAt: new Date().toISOString()
+  });
+  saveState();
+  closeModal();
+  showToast(`Request sent to ${c.name.split(' ')[0]} — waiting for confirmation`);
+  setTab('bookings');
+}
+
+/* ============ Bookings tab (family) ============ */
+function statusBadge(status){
+  if(status==='pending') return `<span class="badge badge-pending">${t('statusRequested')}</span>`;
+  if(status==='upcoming') return `<span class="badge badge-upcoming">${t('statusConfirmed')}</span>`;
+  if(status==='active') return `<span class="badge badge-active"><span class="pulse-dot"></span>&nbsp;${t('statusInProgress')}</span>`;
+  if(status==='declined') return `<span class="badge badge-declined">${t('statusDeclined')}</span>`;
+  return `<span class="badge badge-completed">${t('statusCompleted')}</span>`;
+}
+
+function renderBookingsTab(){
+  if(state.bookings.length===0){
+    return `
+      <div class="empty">
+        <span class="emoji">🗓️</span>
+        <div><strong>${t('bookingsEmptyTitle')}</strong></div>
+        <div style="font-size:0.88rem; margin-top:4px;">${t('bookingsEmptySub')}</div>
+        <button class="btn btn-primary" onclick="setTab('book')">${t('bookBtn')}</button>
+      </div>`;
+  }
+
+  const sorted = [...state.bookings].sort((a,b)=> new Date(b.createdAt) - new Date(a.createdAt));
+  const cards = sorted.map(b => renderBookingCard(b)).join('');
+
+  return `
+    <h2 class="section-title">${t('bookingsTitle')}</h2>
+    <p class="section-sub">${t('bookingsSub')}</p>
+    ${cards}
+  `;
+}
+
+function renderBookingCard(b){
+  const elder = state.elders.find(e=>e.id===b.elderId) || {name:'Unknown elder'};
+  const c = COMPANIONS.find(x=>x.id===b.companionId);
+  const companionCharge = c.rate * b.hours;
+  const total = Math.round(companionCharge*1.2);
+
+  let timeline = '';
+  if(b.checkins.length){
+    timeline = `<div class="timeline">` + b.checkins.map(ci=>{
+      const icon = ci.type==='check-in' ? '📍' : ci.type==='check-out' ? '🏁' : '📝';
+      const label = ci.type==='check-in' ? 'Checked in' : ci.type==='check-out' ? 'Checked out' : 'Update';
+      return `
+        <div class="timeline-item">
+          <div class="timeline-dot">${icon}</div>
+          <div>
+            <div class="t-time">${label} · ${fmtWhen(new Date(ci.time))}</div>
+            <div class="t-note">${ci.note}</div>
+          </div>
+        </div>`;
+    }).join('') + `</div>`;
+  }
+
+  let ratingBlock = '';
+  if(b.status==='completed'){
+    if(b.rating){
+      ratingBlock = `<div style="margin-top:10px; font-size:0.85rem;">Your rating: ${'★'.repeat(b.rating)}${'☆'.repeat(5-b.rating)} ${b.review ? '· "'+b.review+'"' : ''}</div>`;
+    } else {
+      ratingBlock = `
+        <div class="card-actions">
+          <button class="btn btn-ghost btn-small" onclick="openRating('${b.id}')">Rate this visit</button>
+        </div>`;
+    }
+  }
+
+  let statusNote = '';
+  if(b.status==='pending'){
+    statusNote = `<div class="companion-note" style="margin-top:10px;">Waiting for ${c.name.split(' ')[0]} to accept — typically responds ${c.responseTime}. You won't be charged until it's confirmed.</div>`;
+  } else if(b.status==='declined'){
+    statusNote = `
+      <div class="companion-note" style="margin-top:10px; background:var(--rose-soft);">${c.name.split(' ')[0]} wasn't able to accept this request. Nothing was charged.</div>
+      <div class="card-actions"><button class="btn btn-ghost btn-small" onclick="setTab('book')">Find another companion</button></div>`;
+  }
+
+  return `
+    <div class="ticket">
+      <div class="main">
+        <div class="elder-name">${elder.name}</div>
+        <div class="with">with ${c.name} · ${money(c.rate)}/hr</div>
+        <div class="when">📅 ${fmtDate(b.date)}, ${b.startTime} · ${b.hours} hr${b.hours===1?'':'s'}</div>
+        <div class="statusrow">${statusBadge(b.status)}</div>
+        ${statusNote}
+        ${timeline}
+        ${ratingBlock}
+      </div>
+      <div class="stub">
+        <div class="price">${money(total)}</div>
+        <div class="price-label">${b.status==='pending' ? 'if confirmed' : 'total paid'}</div>
+      </div>
+    </div>
+  `;
+}
+
+function openRating(bookingId){
+  openModal(`
+    <div class="modal-head">
+      <h3>Rate this visit</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <p class="section-sub" style="margin-top:6px;">Your rating helps other families choose with confidence.</p>
+    <div class="stars" id="starRow">
+      ${[1,2,3,4,5].map(n=>`<button data-n="${n}" onclick="setStar(${n})">★</button>`).join('')}
+    </div>
+    <label for="reviewText">A note about the visit (optional)</label>
+    <textarea id="reviewText" placeholder="e.g. Very patient and punctual, my parents felt at ease."></textarea>
+    <button class="btn btn-primary" style="margin-top:14px;" onclick="submitRating('${bookingId}')">Submit rating</button>
+  `);
+  window._currentStar = 0;
+}
+function setStar(n){
+  window._currentStar = n;
+  document.querySelectorAll('#starRow button').forEach(btn=>{
+    btn.classList.toggle('filled', parseInt(btn.dataset.n,10) <= n);
+  });
+}
+function submitRating(bookingId){
+  const n = window._currentStar || 0;
+  if(n===0){ showToast('Tap a star to rate the visit'); return; }
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.rating = n;
+  b.review = document.getElementById('reviewText').value.trim() || null;
+  saveState();
+  closeModal();
+  showToast('Thanks for your feedback');
+  render();
+}
+
+/* ============ Elder profiles tab ============ */
+function renderEldersTab(){
+  const cards = state.elders.map(e=>`
+    <div class="elder-card">
+      <div class="row1">
+        <span class="name">${e.name}</span>
+        <span class="meta">${e.age} yrs · ${e.relation}</span>
+      </div>
+      <div class="notes">${e.notes || 'No notes added yet.'}</div>
+      <div class="card-actions">
+        <button class="btn btn-ghost btn-small" onclick="openEditElder('${e.id}')">Edit</button>
+        <button class="btn btn-danger-ghost" onclick="deleteElder('${e.id}')">Remove</button>
+      </div>
+    </div>
+  `).join('');
+
+  return `
+    <h2 class="section-title">${t('eldersTitle')}</h2>
+    <p class="section-sub">${t('eldersSub')}</p>
+    ${cards}
+    <button class="btn btn-ghost" style="margin-top:6px;" onclick="openEditElder(null)">${t('addElderBtn')}</button>
+  `;
+}
+
+function openEditElder(elderId){
+  const e = elderId ? state.elders.find(x=>x.id===elderId) : {name:'', age:'', relation:'', notes:''};
+  openModal(`
+    <div class="modal-head">
+      <h3>${elderId ? 'Edit profile' : 'Add an elder'}</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <label for="eName">Name</label>
+    <input type="text" id="eName" value="${e.name}" placeholder="e.g. Siddhi Singh">
+    <div class="field-row">
+      <div>
+        <label for="eAge">Age</label>
+        <input type="number" id="eAge" value="${e.age}" min="1">
+      </div>
+      <div>
+        <label for="eRelation">Relation</label>
+        <input type="text" id="eRelation" value="${e.relation}" placeholder="e.g. Grandmother">
+      </div>
+    </div>
+    <label for="eNotes">Notes for companions (mobility, medical, preferences)</label>
+    <textarea id="eNotes" placeholder="e.g. Mild arthritis, prefers Hindi conversation, enjoys music.">${e.notes||''}</textarea>
+    <button class="btn btn-primary" style="margin-top:14px;" onclick="saveElder('${elderId||''}')">Save profile</button>
+  `);
+}
+
+function saveElder(elderId){
+  const name = document.getElementById('eName').value.trim();
+  const age = parseInt(document.getElementById('eAge').value,10) || null;
+  const relation = document.getElementById('eRelation').value.trim();
+  const notes = document.getElementById('eNotes').value.trim();
+  if(!name){ showToast('Please add a name'); return; }
+
+  if(elderId){
+    const e = state.elders.find(x=>x.id===elderId);
+    Object.assign(e, {name, age, relation, notes});
+  } else {
+    state.elders.push({id:'e'+Math.random().toString(36).slice(2,9), name, age, relation, notes});
+  }
+  saveState();
+  closeModal();
+  showToast('Profile saved');
+  render();
+}
+
+function deleteElder(elderId){
+  const inUse = state.bookings.some(b=>b.elderId===elderId);
+  if(inUse){
+    showToast("Can't remove: this elder has bookings on record");
+    return;
+  }
+  state.elders = state.elders.filter(x=>x.id!==elderId);
+  saveState();
+  render();
+}
+
+/* ============ Companion view ============ */
+const DEMO_COMPANION_ID = 'c1'; // this prototype's companion view is a single demo account
+
+function docStatusLine(label, doc, kind){
+  const masked = kind==='aadhaar'
+    ? (doc.last4 ? `•••• •••• ${doc.last4}` : '—')
+    : (doc.last4 ? `${doc.last4}•••••` : '—');
+  if(doc.status==='verified') return `<div class="verify-row"><span>${label}</span><span class="v-ok">✓ Verified · ${masked}</span></div>`;
+  if(doc.status==='pending') return `<div class="verify-row"><span>${label}</span><span style="color:var(--marigold); font-weight:700;">⏳ Under review</span></div>`;
+  return `<div class="verify-row"><span>${label}</span><span style="color:var(--ink-soft); font-weight:700;">Not submitted</span></div>`;
+}
+
+function renderCompanionView(){
+  const me = COMPANIONS.find(x=>x.id===DEMO_COMPANION_ID);
+  const docs = state.companionDocs;
+
+  const docRow = (label, key, kind) => {
+    const doc = docs[key];
+    if(doc.status==='verified'){
+      return `<div class="doc-row"><span>${label} <span class="doc-status v-ok">✓ Verified</span></span><button class="btn btn-ghost btn-small" onclick="resubmitDoc('${key}')">Re-upload</button></div>`;
+    }
+    if(doc.status==='pending'){
+      return `<div class="doc-row"><span>${label} <span class="doc-status v-pending">⏳ Under review</span></span><button class="btn btn-ghost btn-small" onclick="simulateVerify('${key}')">Simulate ExtraHands review</button></div>`;
+    }
+    return `
+      <div class="doc-row">
+        <span>${label} <span class="doc-status" style="color:var(--ink-soft);">Not submitted</span></span>
+        <label class="btn btn-marigold btn-small" style="cursor:pointer;">
+          Upload
+          <input type="file" accept="image/*,.pdf" style="display:none;" onchange="uploadDoc('${key}', this)">
+        </label>
+      </div>`;
+  };
+
+  const verificationSection = `
+    <h2 class="section-title">${t('companionProfileTitle')}</h2>
+    <p class="section-sub">You're viewing the demo companion account for ${me.name}. Families can see the verification status below (never the raw document) on your profile.</p>
+    ${docRow('Aadhaar card', 'aadhaar', 'aadhaar')}
+    ${docRow('PAN card', 'pan', 'pan')}
+    <p style="font-size:0.76rem; color:var(--ink-soft); line-height:1.5; margin:6px 0 0;">In a live product, uploaded documents would be encrypted and reviewed by ExtraHands' verification team, never shown to families in raw form, only the verified status and masked reference number are.</p>
+  `;
+
+  const relevant = state.bookings.filter(b=>b.companionId===DEMO_COMPANION_ID && b.status!=='completed' && b.status!=='declined')
+    .sort((a,b)=> (a.date+a.startTime).localeCompare(b.date+b.startTime));
+
+  if(relevant.length===0){
+    return `
+      ${verificationSection}
+      <h2 class="section-title" style="margin-top:26px;">${t('todaysVisits')}</h2>
+      <div class="empty">
+        <span class="emoji">✅</span>
+        <div><strong>No visits assigned right now.</strong></div>
+        <div style="font-size:0.88rem; margin-top:4px;">Switch to "For families" and book ${me.name} to see a request appear here.</div>
+      </div>`;
+  }
+
+  const cards = relevant.map(b=>{
+    const elder = state.elders.find(e=>e.id===b.elderId);
+    let actions = '';
+    if(b.status==='pending'){
+      actions = `
+        <button class="btn btn-primary btn-small" onclick="acceptBooking('${b.id}')">Accept</button>
+        <button class="btn btn-danger-ghost" onclick="declineBooking('${b.id}')">Decline</button>`;
+    } else if(b.status==='upcoming'){
+      actions = `<button class="btn btn-primary btn-small" onclick="openCheckIn('${b.id}')">Check in</button>`;
+    } else {
+      actions = `
+        <button class="btn btn-ghost btn-small" onclick="openAddNote('${b.id}')">Add update</button>
+        <button class="btn btn-marigold" style="width:auto;" onclick="openCheckOut('${b.id}')">Check out</button>`;
+    }
+    let timeline = '';
+    if(b.checkins.length){
+      timeline = `<div class="timeline">` + b.checkins.map(ci=>`
+        <div class="timeline-item">
+          <div class="timeline-dot">${ci.type==='check-in'?'📍':ci.type==='check-out'?'🏁':'📝'}</div>
+          <div><div class="t-time">${fmtWhen(new Date(ci.time))}</div><div class="t-note">${ci.note}</div></div>
+        </div>`).join('') + `</div>`;
+    }
+    return `
+      <div class="ticket">
+        <div class="main">
+          <div class="elder-name">${elder.name} <span style="font-weight:500; color:var(--ink-soft); font-size:0.8rem;">(${elder.relation})</span></div>
+          <div class="with">Booked by family</div>
+          <div class="when">📅 ${fmtDate(b.date)}, ${b.startTime} · ${b.hours} hrs</div>
+          <div class="statusrow">${statusBadge(b.status)}</div>
+          <div class="companion-note"><strong>Notes:</strong> ${elder.notes}</div>
+          ${timeline}
+          <div class="card-actions">${actions}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  return `
+    ${verificationSection}
+    <h2 class="section-title" style="margin-top:26px;">${t('todaysVisits')}</h2>
+    <p class="section-sub">Accepting or checking in here updates the family's app in real time.</p>
+    ${cards}
+  `;
+}
+
+function uploadDoc(key, input){
+  if(!input.files || !input.files.length) return;
+  state.companionDocs[key] = {status:'pending', last4: state.companionDocs[key].last4 || '----', verifiedOn: null};
+  saveState();
+  showToast('Uploaded — sent for ExtraHands review');
+  render();
+}
+function resubmitDoc(key){
+  state.companionDocs[key] = {...state.companionDocs[key], status:'pending'};
+  saveState();
+  showToast('Marked for re-verification');
+  render();
+}
+function simulateVerify(key){
+  const today = new Date().toLocaleDateString('en-IN', {day:'2-digit', month:'short', year:'numeric'});
+  state.companionDocs[key] = {...state.companionDocs[key], status:'verified', verifiedOn: today};
+  saveState();
+  showToast('Verified by ExtraHands (simulated)');
+  render();
+}
+
+function acceptBooking(bookingId){
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.status = 'upcoming';
+  saveState();
+  showToast('Accepted — the family now sees this as confirmed');
+  render();
+}
+function declineBooking(bookingId){
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.status = 'declined';
+  saveState();
+  showToast('Request declined');
+  render();
+}
+
+function openCheckIn(bookingId){
+  openModal(`
+    <div class="modal-head"><h3>Check in</h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <p class="section-sub" style="margin-top:6px;">This creates a timestamped, photo-style confirmation the family can see immediately.</p>
+    <label for="ciNote">A quick note for the family</label>
+    <textarea id="ciNote">Arrived safely, settling in now.</textarea>
+    <button class="btn btn-primary" style="margin-top:14px;" onclick="doCheckIn('${bookingId}')">Confirm check-in</button>
+  `);
+}
+function doCheckIn(bookingId){
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.status = 'active';
+  b.checkins.push({type:'check-in', time:new Date().toISOString(), note:document.getElementById('ciNote').value.trim() || 'Arrived.'});
+  saveState();
+  closeModal();
+  showToast('Checked in — the family can see this now');
+  render();
+}
+
+function openAddNote(bookingId){
+  openModal(`
+    <div class="modal-head"><h3>Add an update</h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <label for="anNote">Note for the family</label>
+    <textarea id="anNote" placeholder="e.g. Had lunch together, everything is fine."></textarea>
+    <button class="btn btn-primary" style="margin-top:14px;" onclick="doAddNote('${bookingId}')">Send update</button>
+  `);
+}
+function doAddNote(bookingId){
+  const note = document.getElementById('anNote').value.trim();
+  if(!note){ showToast('Add a short note first'); return; }
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.checkins.push({type:'note', time:new Date().toISOString(), note});
+  saveState();
+  closeModal();
+  showToast('Update sent to the family');
+  render();
+}
+
+function openCheckOut(bookingId){
+  openModal(`
+    <div class="modal-head"><h3>Check out</h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <label for="coNote">Closing note for the family</label>
+    <textarea id="coNote">Calm, easy visit. No concerns. See you next time!</textarea>
+    <button class="btn btn-marigold" style="margin-top:14px;" onclick="doCheckOut('${bookingId}')">Confirm check-out</button>
+  `);
+}
+function doCheckOut(bookingId){
+  const b = state.bookings.find(x=>x.id===bookingId);
+  b.status = 'completed';
+  b.checkins.push({type:'check-out', time:new Date().toISOString(), note:document.getElementById('coNote').value.trim() || 'Visit complete.'});
+  saveState();
+  closeModal();
+  showToast('Checked out — visit marked complete');
+  render();
+}
+
+/* ============ Install as app ============ */
+const INSTALL_DISMISS_KEY = 'extrahands_install_dismissed';
+let deferredInstallPrompt = null;
+
+function isStandalone(){
+  return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)
+    || window.navigator.standalone === true;
+}
+function wasDismissed(){
+  try{ return localStorage.getItem(INSTALL_DISMISS_KEY) === '1'; }catch(e){ return false; }
+}
+function dismissInstallBanner(){
+  document.getElementById('installBanner').style.display = 'none';
+  try{ localStorage.setItem(INSTALL_DISMISS_KEY, '1'); }catch(e){ /* ignore */ }
+}
+function handleInstallAction(){
+  if(deferredInstallPrompt){
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.finally(()=>{
+      deferredInstallPrompt = null;
+      dismissInstallBanner();
+    });
+  } else {
+    // No native prompt available (iOS Safari, or browser without support): show manual steps.
+    showToast(isIOS() ? 'Tap Share, then "Add to Home Screen"' : 'Open your browser menu and choose "Add to Home screen"');
+  }
+}
+function isIOS(){
+  return /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const btn = document.getElementById('installActionBtn');
+  if(btn) btn.textContent = 'Install';
+  showInstallBannerIfNeeded();
+});
+window.addEventListener('appinstalled', () => {
+  dismissInstallBanner();
+});
+
+function showInstallBannerIfNeeded(){
+  if(isStandalone() || wasDismissed()) return;
+  const banner = document.getElementById('installBanner');
+  const copy = document.getElementById('installCopy');
+  const btn = document.getElementById('installActionBtn');
+  if(isIOS()){
+    copy.textContent = 'Tap the Share icon, then "Add to Home Screen".';
+    btn.textContent = 'How?';
+  } else if(deferredInstallPrompt){
+    copy.textContent = 'Use it like an app, full screen, one tap to open.';
+    btn.textContent = 'Install';
+  } else {
+    copy.textContent = 'Open your browser menu and choose "Add to Home screen".';
+    btn.textContent = 'How?';
+  }
+  banner.style.display = 'flex';
+}
+
+/* ============ Init ============ */
+applyTheme();
+applyHeaderTexts();
+if(!isStandalone()){
+  setTimeout(showInstallBannerIfNeeded, 900);
+}
+render();
+</script>
+</body>
+</html>
