@@ -42,16 +42,6 @@ ExtraHands uses an on-demand marketplace model built around a network of verifie
 
 The concept is designed for both planned care and situations where additional companionship is needed at short notice.
 
-## 🛠️ Technology
-
-The current prototype is implemented as a mobile-friendly web application using:
-
-- **HTML5** — application structure
-- **CSS3** — responsive styling, layouts, and themes
-- **JavaScript** — interactive workflows and application state
-- **Browser Local Storage** — persistence of prototype data
-- **Netlify** — live prototype hosting
-
 
 ## 🧪 Exploring the Prototype
 
